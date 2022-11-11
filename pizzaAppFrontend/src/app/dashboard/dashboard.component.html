@@ -1,0 +1,31 @@
+<div class="grid-container">
+  <hr>
+  <button mat-raised-button color="primary" > CoverPage -></button>
+  <hr>
+  <br>
+  <h1 mat-raised-button color="primary" style=" padding-left: 390px;height: 40px;background: rgb(180, 5, 84);color:white;">----- Welcome to The Pizza Store -----</h1>
+ 
+  <hr>
+ 
+  <img src="https://i.pinimg.com/originals/a4/36/70/a43670c098fa0835f20ee13da3fe4214.gif"
+  alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://giffiles.alphacoders.com/150/150977.gif"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://c.tenor.com/h6N7ymQy2_AAAAAC/dominos-pizza.gif"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <br><br><br><br><br><br><br><br><br>
+
+   <h2 style=" padding-left: 100px;background-color: black;"  >---> You need to Login For Placing Orders</h2>
+  <h1 class="mat-h1"></h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+     
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

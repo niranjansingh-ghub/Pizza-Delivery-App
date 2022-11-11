@@ -1,0 +1,13 @@
+.image{
+    height: 150px;
+  }
+  .content-container{
+    padding-top: 3rem;
+    width: 55%;
+    margin: auto;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    column-gap: 40px;
+    row-gap: 40px;
+    }

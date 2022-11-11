@@ -1,0 +1,32 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Pizza Service</h1>
+
+    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
+      <a  href="http://localhost:4200" mat-list-item style="color: white;padding-left: 900px;">
+        Home
+      </a>
+
+      <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon=""></mat-icon> -->
+      <button (click)="logout()"   mat-list-item style="color: white;padding-left: 20px;">
+        Logout
+      </button> 
+
+   
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container #drawer">
+
+    <!-- <a ><h2><mat-icon style="margin-left:20px ;">account_box</mat-icon>Accounts</h2></a> -->
+    <mat-sidenav #snav opened="false" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+      <mat-nav-list>
+     
+      </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+    <!-- <app-dashboard01></app-dashboard01> -->
+    <app-dashboard02></app-dashboard02>
+  </mat-sidenav-container>
+</div>

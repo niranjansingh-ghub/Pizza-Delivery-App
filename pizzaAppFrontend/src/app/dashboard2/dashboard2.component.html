@@ -1,0 +1,98 @@
+<div class="grid-container">
+  <hr>
+  <br>
+  <h1 mat-raised-button color="primary" style=" padding-left: 390px;height: 40px;background: rgb(180, 5, 84);color:white;">----- Welcome to The Pizza Store -----</h1>
+  <hr>
+
+  <img src="https://i.pinimg.com/originals/a4/36/70/a43670c098fa0835f20ee13da3fe4214.gif"
+  alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://giffiles.alphacoders.com/150/150977.gif"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+
+   <img src="https://c.tenor.com/h6N7ymQy2_AAAAAC/dominos-pizza.gif"
+   alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+   
+  <br>
+  
+  <br>
+  <h2 style="background-color: black;">Place Your Pizza Order</h2>
+  <br>
+  <h3 style="background:black;">Please enter details of pizza you want :-</h3>
+  <div class="example-container" style="padding-bottom: 70px;">
+    <form (submit)="onPlaceOrder(data.value)" #data="ngForm">
+      <mat-form-field appearance="fill">
+          <mat-label>Enter Pizza Id</mat-label>
+          <input matInput type="number" name='pizzaId' #pizzaId="ngModel" 
+          [(ngModel)]="pizzaform.pizzaId" required>
+      </mat-form-field>
+        <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Pizza Name</mat-label>
+        <input matInput name='pizzName' #pizzaName="ngModel" 
+        [(ngModel)]="pizzaform.pizzaName" required> 
+      </mat-form-field>
+       <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Topping</mat-label>
+        <input matInput name='topping' #topping="ngModel" 
+        [(ngModel)]="pizzaform.topping" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+          <mat-label>Enter Size</mat-label>
+          <input matInput name='size' #size="ngModel" 
+          [(ngModel)]="pizzaform.size" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+          <mat-label>Enter No. of pizza</mat-label>
+          <input matInput type="number" name='quantity' #quantity="ngModel" 
+          [(ngModel)]="pizzaform.quantity" required>
+      </mat-form-field>
+      <br>
+  
+      <!-- <button mat-raised-button color="primary" [disabled]="!data.valid " (click)="onPlaceOrder(data)">Place Order</button> -->
+    </form>
+    <!-- </div>
+    <button class="getorder" mat-raised-button color="primary" (click)="getAllPizzas()">Get your Orders</button>
+    <div [hidden]="!data.valid">
+
+      <button mat-raised-button color="primary" [disabled]="!data.valid">Place Order</button> -->
+
+    </div>
+    <button class="getorder" mat-raised-button color="primary" (click)="getAllPizzas()">Get your Orders</button>
+    <div [hidden]="!data.valid">
+      
+      <hr>
+      <br>
+      <h2> Your Orders </h2>
+      <!-- <div *ngFor="let pizza of pizzas">
+        <br>
+        - pizzaId :- {{pizza.pizzaId}} <br>
+        - pizzaName :- {{pizza.pizzaName}} <br>
+        - topping :- {{pizza.topping}} <br>
+        - size :- {{pizza.size}} <br>
+        - quantity :- {{ pizza.quantity }} <br>
+        <br>
+        <hr>
+      </div> -->
+
+      <br>
+      - pizzaId :- {{pizzaform.pizzaId}} <br>
+      - pizzaName :- {{pizzaform.pizzaName}} <br>
+      - topping :- {{pizzaform.topping}} <br>
+      - size :- {{pizzaform.size}} <br>
+      - quantity :- {{ pizzaform.quantity }} <br>
+      <br>
+      <hr>
+
+  </div>
+  <br>
+  <button mat-raised-button color="primary" (click)="logout()" routerLink="/headerurl"> LogOut </button>
+  <br>
+  
+</div>

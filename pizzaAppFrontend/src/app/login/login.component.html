@@ -1,0 +1,26 @@
+<h1>Login</h1>
+<br>
+<form [formGroup]="loginform" (submit)="fun1()">
+
+    Enter Email
+    <br>
+    <input type="text" formControlName="email"><br>
+    <div *ngIf="loginform.controls['email'].hasError('required')">
+      Email is Required</div>
+    <br>
+    <br>
+    Enter Password
+    <br>
+    <input type="password" formControlName="password"><br>
+    <div *ngIf="loginform.controls['password'].hasError('required')">
+      password is Required </div>
+    <div *ngIf="loginform.controls['password'].hasError('minlength')">
+      password min length Required i.e 3
+    </div>
+    <div *ngIf="loginform.controls['password'].hasError('maxlength')">
+      password max length Required i.e 20
+    </div>
+    <br>
+    <br>
+    <input type="submit" [disabled]="!loginform.valid">
+</form>

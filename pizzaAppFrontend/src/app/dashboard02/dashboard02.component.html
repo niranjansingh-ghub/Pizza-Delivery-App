@@ -1,0 +1,146 @@
+<div class="grid-container">
+  <hr>
+  <button mat-raised-button color="primary" > HomePage -></button>
+  <hr>
+    
+    <br>
+    <h1 mat-raised-button color="primary" style=" padding-left: 390px;height: 40px;background: rgb(180, 5, 84);color:white;">----- Welcome to The Pizza Store -----</h1>
+    <hr>
+  
+    <!-- <img src="https://i.pinimg.com/originals/a4/36/70/a43670c098fa0835f20ee13da3fe4214.gif"
+    alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+  
+     <img src="https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg"
+     alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+  
+     <img src="https://giffiles.alphacoders.com/150/150977.gif"
+     alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; ">
+  
+     <img src="https://c.tenor.com/h6N7ymQy2_AAAAAC/dominos-pizza.gif"
+     alt="pizza image" style="height: 240px; width: 300px; padding-left: 30px; padding-top: -5px; "> -->
+     <button mat-raised-button style="background: rgb(180, 5, 84);margin-right:650px; margin-left:100px;"><h2>Your Pizzas :-</h2></button>
+    <br>
+    
+
+     <div class="content-container" >
+        <mat-card class="example-card  " *ngFor="let c of pizzaUser.pizzaList" style="border-radius:50px;">
+           
+            <img mat-card-image class="image" src={{c.image}} alt="image">
+             <mat-card-header>
+              <mat-card-title>{{c.pizzaName}}</mat-card-title>
+              <mat-card-subtitle>{{c.details}}</mat-card-subtitle>
+    
+            </mat-card-header>
+            <mat-card-header>
+                    
+                <mat-card-title>Price : {{c.price}}</mat-card-title>
+    
+            </mat-card-header>
+            <mat-card-content>
+             
+              <p>
+                Toppings : {{c.topping}}
+              </p>
+              <p>
+                Size Type : {{c.size}}
+              </p>
+             
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary"  style="padding-left: 5px;" class="btn btn-primary" type="button" (click)="deleteFromPIzzaList(pizzaList.pizzaName)" >Delete</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    
+    
+    
+        <br>
+        <hr>
+    
+    </div>    
+     
+    <br>
+
+    <div class="song" style="margin-right:650px; margin-left:100px; ">
+        <h2 style="background-color: black;">Place Your Pizza Order</h2>
+        <br>
+        <h3 style="background:black;">Please enter details of pizza you want :-</h3>
+        <mat-card class="example-card">
+ 
+            <mat-card-title>Pizza</mat-card-title>
+            <mat-card-content class="card">
+                <form action="" [formGroup]="pizzaData">
+                    <!-- <input type="text" placeholder="pizzaId" formControlName="pizzaId"><br><br> -->
+                    <input type="text" placeholder="pizzaName" formControlName="pizzaName"><br><br>
+                    <input type="text" placeholder="topping" formControlName="topping"><br><br>
+                    <input type="text" placeholder="size" formControlName="size"><br><br>
+                    <!-- <input type="text" placeholder="quantity" formControlName="quantity"><br><br> -->
+                    <input type="text" placeholder="price" formControlName="price"><br><br>
+                    <input type="text" placeholder="details" formControlName="details"><br><br>
+
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="image" placeholder="image" formControlName="image">
+                      
+                    </div>
+
+                    <button mat-raised-button style="color: pink" (click)="getAllPizza()">Submit</button> &nbsp;&nbsp;
+                </form>
+            </mat-card-content>
+        </mat-card>
+        
+
+     
+    </div>
+ 
+    
+
+  
+  
+    <!-- <table border="4" style="background:black;margin-right:650px; margin-left:100px;" >
+     
+        <th>pizzaId</th>
+        <th>pizzaName</th>
+        <th>topping</th>
+        <th>size</th>
+        <th>quantity</th>
+        <tbody *ngFor="let x of ">
+            <td>{{ x.pizzaId }}</td>
+            <td>{{ x.pizzaName }}</td>
+            <td>{{ x.topping }}</td>
+            <td>{{ x.size }}</td>
+            <td>{{ x.quantity }}</td>
+            <td>{{ x.price }}</td>
+            <td>{{ x.details }}</td>
+        </tbody>
+
+    </table> -->
+
+    
+
+
+    <!-- 
+<div class="content-container" >
+    <mat-card class="example-card  " *ngFor="let c of content" style="border-radius:50px;">
+        <mat-card-header>
+          <mat-card-title>{{c.title}}</mat-card-title>
+          <mat-card-subtitle>{{c.subTitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="img" src={{c.imgUrl}} alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{c.description}}
+          </p>
+          <p>
+            Publisher : {{c.publisher}}
+          </p>
+          <p>
+            Content Type : {{c.contentType}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button><span>{{c.likes}}</span>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div> -->
+

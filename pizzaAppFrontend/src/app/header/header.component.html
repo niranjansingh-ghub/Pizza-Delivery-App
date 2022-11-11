@@ -1,0 +1,23 @@
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">The Pizza Store</h1>
+
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container #drawer">
+  <mat-sidenav #snav opened="false" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+     <mat-nav-list>
+        <a  routerLink="loginurl" mat-list-item >
+          Login
+        </a>
+        <a  routerLink="registerurl" mat-list-item >
+          Register
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  <app-dashboard></app-dashboard>
+ </mat-sidenav-container>
+</div>
